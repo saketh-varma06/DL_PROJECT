@@ -2,7 +2,15 @@
 
 A deep learning project that automatically identifies flooded areas from aerial images. Instead of manually inspecting disaster images one by one, the model looks at every pixel of an image and classifies what it belongs to — flooded buildings, flooded roads, water, trees, vehicles, and more. Based on this, it gives a simple final verdict on whether flood-related damage is present in the scene.
 
-> **A small note on the data:** although the project title says "satellite", the model is actually trained on the **FloodNet dataset**, which contains aerial/UAV images captured after Hurricane Harvey. So the model works on aerial imagery, not satellite imagery.
+> **A small note on the data:** although the project title says "satellite", the model is actually trained on the **[FloodNet dataset](https://www.kaggle.com/datasets/imroze/floodnet-cropresized-512-wpartialmasks)**, which contains aerial/UAV images captured after Hurricane Harvey. So the model works on aerial imagery, not satellite imagery.
+
+## Quick links
+
+- 📂 **Dataset (Kaggle):** [FloodNet — Crop-Resized 512 with Partial Masks](https://www.kaggle.com/datasets/imroze/floodnet-cropresized-512-wpartialmasks)
+- 📄 **FloodNet paper:** [FloodNet: A High Resolution Aerial Imagery Dataset for Post Flood Scene Understanding](https://arxiv.org/abs/2012.02951)
+- 💻 **FloodNet official code (Bina Lab):** [github.com/BinaLab/FloodNet-Supervised_v1.0](https://github.com/BinaLab/FloodNet-Supervised_v1.0)
+- 📄 **DeepLabV3 paper:** [Rethinking Atrous Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1706.05587)
+- 📄 **MobileNetV3 paper:** [Searching for MobileNetV3](https://arxiv.org/abs/1905.02244)
 
 ## Why I built this
 
@@ -19,7 +27,8 @@ The important design decision here: **plain water alone never triggers a flood v
 
 ## Dataset
 
-- **FloodNet** (Kaggle: `imroze/floodnet-cropresized-512-wpartialmasks`)
+- **FloodNet** — download from Kaggle: [imroze/floodnet-cropresized-512-wpartialmasks](https://www.kaggle.com/datasets/imroze/floodnet-cropresized-512-wpartialmasks)
+- Original dataset and code by Bina Lab: [FloodNet-Supervised_v1.0 on GitHub](https://github.com/BinaLab/FloodNet-Supervised_v1.0) | [Research paper](https://arxiv.org/abs/2012.02951)
 - Aerial images from Hurricane Harvey flood regions
 - **398 usable images** after cleaning, split with zero overlap:
   - Training: 278 images
@@ -76,10 +85,10 @@ This rule was added because an early version of the logic treated any large wate
 
 ## Tech stack
 
-- Python, PyTorch (DeepLabV3 implementation)
-- Google Colab for training
+- Python, [PyTorch](https://pytorch.org) (DeepLabV3 implementation)
+- [Google Colab](https://colab.research.google.com) for training
 - NumPy, Matplotlib for analysis and visualisation
-- Kaggle for the FloodNet dataset
+- [Kaggle](https://www.kaggle.com/datasets/imroze/floodnet-cropresized-512-wpartialmasks) for the FloodNet dataset
 
 ## Limitations (being honest about them)
 
@@ -97,16 +106,12 @@ This rule was added because an early version of the logic treated any large wate
 
 ## References
 
-- FloodNet dataset and benchmark — Rahnemoonfar et al., "FloodNet: A High Resolution Aerial Imagery Dataset for Post Flood Scene Understanding"
-- DeepLabV3 — Chen et al., "Rethinking Atrous Convolution for Semantic Image Segmentation"
-- MobileNetV3 — Howard et al., "Searching for MobileNetV3"
+- FloodNet dataset and benchmark — Rahnemoonfar et al., ["FloodNet: A High Resolution Aerial Imagery Dataset for Post Flood Scene Understanding"](https://arxiv.org/abs/2012.02951)
+- DeepLabV3 — Chen et al., ["Rethinking Atrous Convolution for Semantic Image Segmentation"](https://arxiv.org/abs/1706.05587)
+- MobileNetV3 — Howard et al., ["Searching for MobileNetV3"](https://arxiv.org/abs/1905.02244)
 
 ## Author
 
 **K. Saketh Varma**
-Roll No: 2403A510B6
-B.Tech, Computer Science & Engineering
-SR University, Warangal
-Academic Year: 2026
 
 *This project was developed as part of the Artificial Intelligence and Deep Learning course project (24CS312PC310), under the supervision of Dr. Anurodh Kumar.*
