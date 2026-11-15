@@ -113,5 +113,3 @@ This rule was added because an early version of the logic treated any large wate
 ## Author
 
 **K. Saketh Varma**
-
-*This project was developed as part of the Artificial Intelligence and Deep Learning course project (24CS312PC310), under the supervision of Dr. Anurodh Kumar.*
